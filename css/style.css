@@ -225,17 +225,16 @@ footer a {
         padding: 0 10em;
     }
 
-    .contact p:last-child {
-        padding: 0;
-        margin-top: -20px;
-    }
-
     footer {
         padding: 0 2em 5em;
     }
 
     .backtotop {
         display: none;
+    }
+
+    .tablet-nav {
+        display: flex;
     }
 
     .tablet-nav ul li {
