@@ -47,6 +47,10 @@ p {
     text-transform: initial;
 }
 
+img {
+    border-radius: 10px;
+}
+
 /* Nav Style */
 
 nav {
@@ -88,6 +92,7 @@ nav li {
 
 main {
     background-color: #fff;
+    padding-bottom: 3em;
 }
 
 .container {
@@ -98,7 +103,7 @@ main {
 
 .card {
     width: 90%;
-    padding: 1em 0;
+    padding: 1em 0 2em 0;
 }
 
 .card img {
@@ -109,9 +114,9 @@ main {
     font-weight: lighter;
 }
 
-.card:last-child {
+/* .card:last-child {
     margin-bottom: 2em;
-}
+} */
 
 .card:last-child p {
     padding-left: 10px;
@@ -162,6 +167,8 @@ footer a {
 
     main {
         padding-top: 2em;
+        padding-bottom: 0;
+
     }
 
     nav ul {
@@ -214,12 +221,12 @@ footer a {
 
     .card {
         flex: 40%;
-        padding: .5em;
+        padding: .5em .5em 3em .5em;
     }
 
-    .card:last-child {
+    /* .card:last-child {
         margin: 0;
-    }
+    } */
 
     .contact {
         padding: 0 10em;
@@ -239,5 +246,75 @@ footer a {
 
     .tablet-nav ul li {
         padding: 0 1em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header,
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    header h1 {
+        margin-right: auto;
+        padding-left: 2em;
+        padding-top: 0;
+        align-self: center;
+    }
+
+    header {
+        padding-bottom: 50px;
+    }
+
+    nav {
+        padding-right: 2em;
+        padding-top: 1em;
+    }
+
+    nav ul li {
+        padding: 1em;
+    }
+
+    .profile-intro img {
+        max-height: 300px;
+    }
+
+    .profile-intro p {
+        padding-right: 2em;
+    }
+
+    main {
+        max-width: 95%;
+        margin: 0 auto;
+        padding-bottom: 0;
+    }
+    .container {
+        max-width: 100%;
+    }
+
+    .card {
+        flex: 30%;
+        margin-bottom: 2em;
+    }
+
+    /* .card:last-child {
+        margin-bottom: 2em;
+    } */
+
+    .contact {
+        padding: 0 18em;
+    }
+
+    footer {
+        padding-bottom: 0;
+    }
+
+    footer p {
+        padding-left: 1.25em;
+    }
+
+    footer nav {
+        padding: 0 1em .5em 0;
     }
 }
