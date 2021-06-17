@@ -9,7 +9,8 @@
 /* Body Style */
 
 body,
-main {
+main,
+aside {
     display: flex;
     flex-direction: column;
 }
@@ -23,6 +24,7 @@ body {
 
 h1 {
     text-transform: capitalize;
+    font-family: 'Russo One', sans-serif;
 }
 
 h2 {
@@ -39,9 +41,13 @@ a {
     text-decoration: none;
     color: initial;
 }
-li a {
+
+.header-nav a {
     display: block;
     padding: 1em 0;
+    color: white;
+    border-radius: 10px;
+    background-color: #69b2c8;
 }
 
 p {
@@ -64,11 +70,11 @@ nav ul {
     display: flex;
     flex-direction: column;
 }
-nav li {
-    background-color: #fff;
+.header-nav li {
     width: 90%;
     margin-top: .5em;
     font-weight: bold;
+
 }
 
 /* Class Style */
@@ -87,12 +93,13 @@ nav li {
 
 .profile-intro p {
     margin: 25px 10px;
+    color: coral;
 }
 
 /* main section style */
 
 main {
-    background-color: #fff;
+    background-color: azure;
     padding-bottom: 3em;
 }
 
@@ -115,14 +122,30 @@ main {
     font-weight: lighter;
 }
 
-/* .card:last-child {
-    margin-bottom: 2em;
-} */
-
 .card:last-child p {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+aside {
+    width: 100%;
+    padding: .5em;
+    background-color: #69b2c8;
+}
+
+aside ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    max-width: 420px;
+    align-self: center;
+}
+
+.logo {
+    width: 80%;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+
 
 .contact {
     margin: 3em 0;
@@ -146,7 +169,6 @@ hr {
 
 footer {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1em;
@@ -156,7 +178,7 @@ footer a {
     text-transform: uppercase;
 }
 
-.tablet-nav {
+.full-nav {
     display: none;
 }
 
@@ -164,6 +186,13 @@ footer a {
     header h1 {
         padding-top: 1em;
         margin-bottom: 0;
+    }
+
+    a:hover {
+        background-color: coral;
+        color: darkblue;
+        padding: 5px;
+        border-radius: 10px;
     }
 
     main {
@@ -183,18 +212,18 @@ footer a {
 
     nav li {
         width: initial;
-        background-color: #FAFAFA;
     }
 
-    nav a {
-        display: inline-flex;
+    .header-nav a {
+        /* display: inline-flex; */
+        padding: 10px 20px;
+        margin: 10px;
     }
 
     .profile-intro {
         flex-direction: row;
-        margin: 2em;
+        margin: 5em 2em 1em;
         padding: 20px;
-        height: 200px;
     }
 
     .profile-intro p {
@@ -225,9 +254,15 @@ footer a {
         padding: .5em .5em 3em .5em;
     }
 
-    /* .card:last-child {
-        margin: 0;
-    } */
+    aside ul {
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        max-width: 90%;
+    }
+
+    aside ul li {
+        flex: 30%;
+    }
 
     .contact {
         padding: 0 10em;
@@ -248,9 +283,23 @@ footer a {
     .tablet-nav ul li {
         padding: 0 1em;
     }
+
+    .full-nav {
+        display: inline-flex;
+        margin: 10px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
+
+    .profile-intro,
+    main,
+    aside,
+    section {
+        max-width: 1150px;
+        align-self: center;
+    }
+
     header,
     nav {
         display: flex;
@@ -273,8 +322,8 @@ footer a {
         padding-top: 1em;
     }
 
-    nav ul li {
-        padding: 1em;
+    .profile-intro {
+        margin: 2em auto;
     }
 
     .profile-intro img {
@@ -286,9 +335,10 @@ footer a {
     }
 
     main {
-        max-width: 95%;
-        margin: 0 auto;
-        padding-bottom: 0;
+        width: 95%;
+        margin: 20px;
+        align-self: center;
+        border-radius: 10px;
     }
     .container {
         max-width: 100%;

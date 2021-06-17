@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <style> @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');</style>
+    <!-- <style> @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');</style> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,15 +15,16 @@
     <header>
         <h1>scott colby</h1>
         <nav>
-            <ul>
+            <ul class="header-nav">
                 <li><a href="#top">home</a></li>
                 <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#skills">skills</a></li>
                 <li><a href="#contact">contact</a></li>
             </ul>
         </nav>
         <div class="profile-intro" id="intro">
-            <img src="images/responsive-layout-profile.png" alt="portfolio picture" id="intro-item pic">
-            <p id="intro-item para">Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put all my skills to use!</p>
+            <img src="images/responsive-layout-profile.png" alt="portfolio picture">
+            <p>Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put all my skills to use!</p>
         </div>
     </header>
     <main>
@@ -64,6 +67,14 @@
             </div>
         </div>
     </main>
+    <aside id="skills">
+        <h3>these are the skills i want to be proficient in</h3>
+        <ul>
+            <li><img src="images/html.png" alt="html logo" class="logo"></li>
+            <li><img src="images/css.png" alt="css logo" class="logo"></li>
+            <li><img src="images/js.png" alt="js logo" class="logo"></li>
+        </ul>
+    </aside>
     <section class="contact">
         <h3 id="contact">Contact</h3>
         <p  class="contact-p">If you're interested in chatting or want more information about what I’ve been working on, I'd love to hear from you!</p>
@@ -73,12 +84,13 @@
     <div><hr></div>
     <footer>
         <p>Scott Colby</p>
-        <a href="#top" class="backtotop">Back to top</a>
-        <nav class="tablet-nav">
-            <ul>
-                <li><a href="#top">home</a></li>
-                <li><a href="#portfolio">portfolio</a></li>
-                <li><a href="#contact">contact</a></li>
+        <nav>
+            <ul class="tablet-nav">
+                <li class="backtotop"><a href="#top">Back to top</a></li>
+                <li class="full-nav"><a href="#top">home</a></li>
+                <li class="full-nav"><a href="#portfolio">portfolio</a></li>
+                <li class="full-nav"><a href="#skills">skills</a></li>
+                <li class="full-nav"><a href="#contact">contact</a></li>
             </ul>
         </nav>
     </footer>
